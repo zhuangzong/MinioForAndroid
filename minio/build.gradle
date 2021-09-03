@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.annimon:stream:1.2.1'
+    implementation "io.reactivex.rxjava2:rxjava:2.1.0"
+    implementation 'javax.xml.stream:stax-api:1.0-2'
+    implementation 'com.fasterxml:aalto-xml:1.0.0'
+    implementation 'commons-io:commons-io:2.8.0'
+    implementation 'joda-time:joda-time:2.10.8'
+    implementation "com.carrotsearch.thirdparty:simple-xml-safe:2.7.1"
+    implementation "com.google.guava:guava:25.1-jre"
+    implementation "com.squareup.okhttp3:okhttp:3.14.9"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:2.10.3"
+    implementation "com.fasterxml.jackson.core:jackson-core:2.10.3"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.10.3"
+    implementation 'com.github.spotbugs:spotbugs-annotations:4.0.0'
+    implementation 'net.jcip:jcip-annotations:1.0'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+}
